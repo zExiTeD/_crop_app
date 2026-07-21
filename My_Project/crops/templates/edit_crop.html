@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Crop</title>
+</head>
+<body>
+
+<h2>Edit Crop</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Crop Name</label><br>
+    <input type="text" name="crop_name" value="{{ crop.crop_name }}"><br><br>
+
+    <label>Farmer Name</label><br>
+    <input type="text" name="farmer_name" value="{{ crop.farmer_name }}"><br><br>
+
+    <label>Season</label><br>
+    <input type="text" name="season" value="{{ crop.season }}"><br><br>
+
+    <label>Price</label><br>
+    <input type="text" name="price" value="{{ crop.price }}"><br><br>
+
+    <button type="submit">Update Crop</button>
+</form>
+
+<p><a href="/view/">Back to Crop List</a></p>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h2>Crop List</h2>
+
+<table border="1">
+
+<tr>
+
+<th>Crop</th>
+
+<th>Farmer</th>
+
+<th>Season</th>
+
+<th>Price</th>
+
+</tr>
+
+{% for crop in crops %}
+
+<tr>
+
+<td>{{crop.crop_name}}</td>
+
+<td>{{crop.farmer_name}}</td>
+
+<td>{{crop.season}}</td>
+
+<td>{{crop.price}}</td>
+
+<td>
+
+<a href="/edit/{{crop.id}}">Edit</a>
+
+<a href="/delete/{{crop.id}}">Delete</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+
+</html>
